@@ -12,6 +12,10 @@ function App(){
     setInterval(increaseCount,1000);
     }, []) // this effect will run on mount
 
+    useEffect(function(){
+    console.log("the current count is " + count);
+    }, [count]) // this effect will run on mount
+
     return <div>
       {count}
     </div>
